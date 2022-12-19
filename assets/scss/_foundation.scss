@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+:root {
+    --main-red: #ea5a5e;
+    --main-blue: #0079C2;
+    --main-bg-red: #ffc5c7;
+    --main-bg-blue: #e5f2f9;
+    --main-bg-gray: #fafafa;
+    --main-line-gray: #cbd5e0;
+    --main-text: #333333;  
+    --main-gray: #777777;  
+}
+
+html {
+    font-size: inherit;
+}
+
+body {
+    font-family: 'Noto Sans JP','Hiragino Kaku Gothic ProN', Proxima Nova, Verdana, 游ゴシック, YuGothic, Meiryo, sans-serif, sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--main-bg-gray);
+    color: var(--main-text);
+    letter-spacing: 0.05em;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--main-line-gray);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-family: 'Noto Sans JP','Hiragino Kaku Gothic ProN', Proxima Nova, Verdana, 游ゴシック, YuGothic, Meiryo, sans-serif, sans-serif;
+    font-size: inherit;
+}

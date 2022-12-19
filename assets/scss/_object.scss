@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/* BUTTON */
+.btn__primary {
+    font-size: 1rem;
+    display: block;
+    width: 280px;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--main-red);
+    border-radius: 4px;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: var(--main-blue);
+    }
+}
+
+.btn__gray {
+    font-size: 1rem;
+    display: block;
+    width: 280px;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--main-gray);
+    border-radius: 4px;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: var(--main-text);
+    }
+}
+
+.btn__edit,
+.btn__reply {
+    font-size: 14px;
+    color: var(--main-gray);
+    &:hover {
+        color: var(--main-blue);
+        text-decoration: underline;
+    }
+}
+.btn__reply {/* 返信機能未実装のため非表示にしています */
+    display: none; /* 実装後この文を削除 */
+}
+
+.btn__delete {
+    font-size: 14px;
+    color: var(--main-gray);
+    text-decoration: underline;
+    &:hover {
+        color: var(--main-red);
+    }
+}
+
+.btn-fixed {
+    display: none;
+
+    @include tab {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+.btn__to-draft {
+    font-size: 1rem;
+    display: block;
+    color: #ffffff;
+    background-color: var(--main-red);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    &::after {
+        content: '\2b';
+        font-family: 'Font Awesome 6';
+        font-weight: 700;
+        font-size: 24px;
+        position: absolute;
+        top: 0;
+        left: 12px;
+    }
+}
+
+// ページネーション
+.page-nation {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        background-color: #e4e4e4;
+        width: 40px;
+        height: 40px;
+
+        a{
+            color: var(--main-text);
+        }
+        &:hover {
+            background-color: var(--main-red);
+            a{
+            color: #ffffff;
+            }
+        }
+    }
+    li.current {
+        color: #ffffff;
+        background-color: var(--main-red);
+    }
+}

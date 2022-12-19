@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.flex__center {
+    display: flex;
+    justify-content: center;
+}
+.flex__end {
+    display: flex;
+    justify-content: flex-end;
+}
+.flex__start {
+    display: flex;
+    justify-content: flex-start;
+}
+.sp-only {
+    display: none;
+    @include tab {
+        display: block;
+    }
+}
+.mt40 {
+    margin-top: 40px;
+}
+.mt80 {
+    margin-top: 80px;
+}
